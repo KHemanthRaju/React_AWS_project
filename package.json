@@ -1,0 +1,35 @@
+{
+  "name": "react_aws_project",
+  "version": "1.0.0",
+  "description": "A simple React AWS Project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "react-scripts start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KHemanthRaju/React_AWS_project.git"
+  },
+  "keywords": [
+    "react",
+    "aws"
+  ],
+  "author": "Hemanth Raju",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KHemanthRaju/React_AWS_project/issues"
+  },
+  "homepage": "https://github.com/KHemanthRaju/React_AWS_project#readme",
+  "devDependencies": {
+    "parcel": "^2.11.0",
+    "process": "^0.11.10"
+  },
+  "dependencies": {
+    "nodemon": "^3.0.3",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router": "^6.22.0",
+    "react-scripts": "^5.0.1"
+  }
+}
