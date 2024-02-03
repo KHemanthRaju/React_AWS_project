@@ -2,7 +2,6 @@
   "name": "react_aws_project",
   "version": "1.0.0",
   "description": "A simple React AWS Project",
-  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "parcel index.html",
