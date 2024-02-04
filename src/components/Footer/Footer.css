@@ -16,17 +16,21 @@
 .row2 {
   display: flex;
   flex-wrap: wrap;
-  font-size: 13px;
-  width: 50%;
-  justify-content: space-around;
-  margin-top: 50px;
-  margin-left: 25%;
+  font-size: 12px;
+  width: auto;
+  /* gap: 3rem; */
+  justify-content: center;
+  margin-top: 40px;
 }
 ul {
   list-style: none;
 }
 li {
   color: white;
+  cursor: pointer;
+}
+li:hover {
+  text-decoration: underline;
 }
 .footer {
   background-color: #24262b;

@@ -59,6 +59,7 @@ const Footer = () => {
             <div className="footer-col">
               <h4>Contact Us</h4>
               <ul>
+                <li>AU Sales: 1300 3666 386</li>
                 <li>US Sales: +1.800.633.0738</li>
                 <li>How can we help?</li>
                 <li>Subscribe to emails</li>
@@ -76,7 +77,9 @@ const Footer = () => {
             </div>
             <div className="footer-col">
               <ul>
-                <li>Do not Sell My Info</li>
+                <li>
+                  <span>Privacy / </span>Do not Sell My Info
+                </li>
               </ul>
             </div>
             <div className="footer-col">
@@ -97,12 +100,19 @@ const Footer = () => {
             <AiFillFacebook
               style={{
                 color: "white",
-                fontSize: "30px",
+                fontSize: "27px",
+                margin: "0 10px",
               }}
             />
-            <FaSquareXTwitter style={{ color: "white", fontSize: "30px" }} />
-            <FaLinkedinIn style={{ color: "white", fontSize: "30px" }} />
-            <FaYoutube style={{ color: "white", fontSize: "30px" }} />
+            <FaSquareXTwitter
+              style={{ color: "white", fontSize: "27px", margin: "0 10px" }}
+            />
+            <FaLinkedinIn
+              style={{ color: "white", fontSize: "27px", margin: "0 10px" }}
+            />
+            <FaYoutube
+              style={{ color: "white", fontSize: "27px", margin: "0 10px" }}
+            />
           </div>
         </div>
       </footer>
