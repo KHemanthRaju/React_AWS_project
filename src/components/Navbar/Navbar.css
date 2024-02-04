@@ -9,8 +9,11 @@
 }
 
 .site-header {
-  position: relative;
-  background-color: black;
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
 
 .site-header a {

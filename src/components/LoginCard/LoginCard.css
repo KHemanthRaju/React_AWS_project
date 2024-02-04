@@ -4,7 +4,8 @@
 
 .card {
   box-shadow: 0 0 10px black;
-  margin: 50px;
+  /* margin-top: 75px; */
+  margin: 75px 50px 30px;
   padding: 20px;
   height: 400px;
 }
