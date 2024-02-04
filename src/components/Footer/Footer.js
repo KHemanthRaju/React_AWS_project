@@ -1,4 +1,8 @@
 import React from "react";
+import { AiFillFacebook } from "react-icons/ai";
+import { FaSquareXTwitter } from "react-icons/fa6";
+import { FaLinkedinIn } from "react-icons/fa";
+import { FaYoutube } from "react-icons/fa";
 import "./Footer.css";
 
 const Footer = () => {
@@ -72,12 +76,12 @@ const Footer = () => {
             </div>
             <div className="footer-col">
               <ul>
-                <li>Do not Sell</li>
+                <li>Do not Sell My Info</li>
               </ul>
             </div>
             <div className="footer-col">
               <ul>
-                <li>My Info</li>
+                <li>Cookie Preferences</li>
               </ul>
             </div>
             <div className="footer-col">
@@ -90,6 +94,15 @@ const Footer = () => {
                 <li>Careers</li>
               </ul>
             </div>
+            <AiFillFacebook
+              style={{
+                color: "white",
+                fontSize: "30px",
+              }}
+            />
+            <FaSquareXTwitter style={{ color: "white", fontSize: "30px" }} />
+            <FaLinkedinIn style={{ color: "white", fontSize: "30px" }} />
+            <FaYoutube style={{ color: "white", fontSize: "30px" }} />
           </div>
         </div>
       </footer>
