@@ -1,0 +1,32 @@
+* {
+  box-sizing: border-box;
+}
+
+.card {
+  box-shadow: 0 0 10px black;
+  margin: 50px;
+  padding: 20px;
+  height: 400px;
+}
+
+input {
+  width: 100%;
+}
+
+button {
+  padding: 7px;
+  border-radius: 6px;
+  margin-top: 7px;
+}
+
+.card_middle {
+  margin-top: 15px;
+  margin-bottom: 25px;
+}
+
+.card_bottom {
+  margin-top: 25px;
+}
+/* .card p {
+  padding: 18px;
+} */

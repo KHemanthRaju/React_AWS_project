@@ -1,0 +1,9 @@
+* {
+  box-sizing: border-box;
+}
+
+.Content_Card {
+  box-shadow: 0 0 10px black;
+  margin: 50px;
+  padding: 20px;
+}

@@ -1,0 +1,12 @@
+.layout {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.left-side {
+  width: 40%;
+}
+
+.right-side {
+  width: 60%;
+}
