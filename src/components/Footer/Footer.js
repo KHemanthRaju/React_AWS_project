@@ -1,9 +1,11 @@
 import React from "react";
+import "./Footer.css";
 
 const Footer = () => {
+  console.log("Enters");
   return (
     <>
-      <footer>
+      <footer className="footer">
         <div className="container">
           <div className="row">
             <div className="footer-col">
@@ -26,6 +28,66 @@ const Footer = () => {
                 <li>vs. AWS</li>
                 <li>vs. Google Cloud</li>
                 <li>vs. MongoDB</li>
+              </ul>
+            </div>
+            <div className="footer-col">
+              <h4>Learn</h4>
+              <ul>
+                <li>What is AI?</li>
+                <li>What is Cloud Computing?</li>
+                <li>What is Cloud Storage?</li>
+                <li>What is HPC?</li>
+                <li>What is Iaas?</li>
+                <li>What is Paas?</li>
+              </ul>
+            </div>
+            <div className="footer-col">
+              <h4>What's new</h4>
+              <ul>
+                <li>Oracle Supports Ukraine</li>
+                <li>Oracle Cloud Free Tier</li>
+                <li>Cloud Architecture Center</li>
+                <li>Cloud Lift</li>
+                <li>Oracle Support Rewards</li>
+                <li>Oracle Red Bull Racing</li>
+              </ul>
+            </div>
+            <div className="footer-col">
+              <h4>Contact Us</h4>
+              <ul>
+                <li>US Sales: +1.800.633.0738</li>
+                <li>How can we help?</li>
+                <li>Subscribe to emails</li>
+                <li>Events</li>
+                <li>News</li>
+                <li>OCI Blog</li>
+              </ul>
+            </div>
+          </div>
+          <div className="row2">
+            <div className="footer-col">
+              <ul>
+                <li>@2024 Oracle</li>
+              </ul>
+            </div>
+            <div className="footer-col">
+              <ul>
+                <li>Do not Sell</li>
+              </ul>
+            </div>
+            <div className="footer-col">
+              <ul>
+                <li>My Info</li>
+              </ul>
+            </div>
+            <div className="footer-col">
+              <ul>
+                <li>Ad Choices</li>
+              </ul>
+            </div>
+            <div className="footer-col">
+              <ul>
+                <li>Careers</li>
               </ul>
             </div>
           </div>
