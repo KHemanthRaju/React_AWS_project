@@ -1,16 +1,35 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./ContentCard.css";
+import { data } from "../../data/data";
 
-const ContentCard = ({ data }) => {
+const ContentCard = () => {
   //   console.log(data);
-  const { title, description, buttonContent } = data;
+
+  const [contentData, setContentData] = useState(data);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch(`/api/contents`);
+        const json = await response.json();
+        if (!response.ok) throw new Error(json.message);
+        setContentData(json);
+      } catch (err) {
+        console.log("Failed to fetch content data");
+      }
+    };
+    fetchData();
+  }, []);
+
   return (
     <>
-      <div className="Content_Card">
-        <h2>{title}</h2>
-        <p>{description}</p>
-        <button>{buttonContent}</button>
-      </div>
+      {contentData.map((item) => (
+        <div className="Content_Card">
+          <h2>{item.title}</h2>
+          <p>{item.description}</p>
+          <button>{item.buttonContent}</button>
+        </div>
+      ))}
     </>
   );
 };

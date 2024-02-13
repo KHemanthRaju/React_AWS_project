@@ -12,8 +12,9 @@ const Layout = () => {
           <LoginCard />
         </div>
         <div className="right-side">
-          <ContentCard data={data[0]} />
-          <ContentCard data={data[1]} />
+          <ContentCard />
+          {/* <ContentCard data={data[0]} />
+          <ContentCard data={data[1]} /> */}
         </div>
       </div>
     </>

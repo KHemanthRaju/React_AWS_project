@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { AiFillFacebook } from "react-icons/ai";
 import { FaSquareXTwitter } from "react-icons/fa6";
 import { FaLinkedinIn } from "react-icons/fa";
@@ -6,13 +6,47 @@ import { FaYoutube } from "react-icons/fa";
 import "./Footer.css";
 
 const Footer = () => {
+  const [footerData, setFooterData] = useState(null);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch("/api/footer");
+        if (!response.ok) {
+          throw new Error("Network response was not ok");
+        }
+        const data = await response.json();
+        console.log(data);
+        setFooterData(data);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
+    fetchData();
+  }, []);
+
   console.log("Enters");
   return (
     <>
       <footer className="footer">
         <div className="container">
           <div className="row">
-            <div className="footer-col">
+            {footerData &&
+              Object.keys(footerData).map((sectionKey) => {
+                const section = footerData[sectionKey];
+                return (
+                  <div className="footer-col" key={sectionKey}>
+                    <h4>{section.title}</h4>
+                    {console.log(section)}
+                    <ul>
+                      {section.items.map((item, index) => (
+                        <li key={index}>{item}</li>
+                      ))}
+                    </ul>
+                  </div>
+                );
+              })}
+            {/* <div className="footer-col">
               <h4>Resources for</h4>
               <ul>
                 <li>Careers</li>
@@ -67,7 +101,7 @@ const Footer = () => {
                 <li>News</li>
                 <li>OCI Blog</li>
               </ul>
-            </div>
+            </div> */}
           </div>
           <div className="row2">
             <div className="footer-col">

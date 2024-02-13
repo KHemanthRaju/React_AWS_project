@@ -12,3 +12,12 @@ export const data = [
     buttonContent: "Read the report",
   },
 ];
+
+export const navbarData1 = [
+  "About",
+  "Services",
+  "Solutions",
+  "Pricing",
+  "Partners",
+  "Resources",
+];

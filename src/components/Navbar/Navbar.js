@@ -1,11 +1,26 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { IoSearchSharp } from "react-icons/io5";
 import { HiOutlineLanguage } from "react-icons/hi2";
 import { PiChats } from "react-icons/pi";
 import { IoIosContact } from "react-icons/io";
 import "./Navbar.css";
+import { navbarData1 } from "../../data/navbarData1";
 
 const Navbar = () => {
+  const [navbarData, setNavbarData] = useState(navbarData1);
+  useEffect(() => {
+    const fetchNavbar = async () => {
+      try {
+        const response = await fetch("/api/navbar");
+        if (!response.ok) throw new Error("Could not retrieve navbar data.");
+        const jdata = await response.json();
+        setNavbarData(jdata);
+      } catch (err) {
+        console.log("Failed to fetch navbar data");
+      }
+    };
+    fetchNavbar();
+  }, []);
   return (
     <>
       <header className="site-header">
@@ -42,24 +57,13 @@ const Navbar = () => {
           </div>
           <div className="site-header__middle">
             <ul className="sub-nav">
-              <li class="">
-                <a href="#">About</a>
-              </li>
-              <li class="">
-                <a href="#">Services</a>
-              </li>
-              <li class="">
-                <a href="#">Solutions</a>
-              </li>
-              <li class="">
-                <a href="#">Pricing</a>
-              </li>
-              <li class="">
-                <a href="#">Partners</a>
-              </li>
-              <li class="">
-                <a href="#">Resources</a>
-              </li>
+              {navbarData?.map((item) => (
+                <>
+                  <li class="">
+                    <a href="#">{item}</a>
+                  </li>
+                </>
+              ))}
             </ul>
           </div>
           <div class="site-header__end">
