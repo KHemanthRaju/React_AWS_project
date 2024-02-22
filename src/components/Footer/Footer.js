@@ -4,6 +4,7 @@ import { FaSquareXTwitter } from "react-icons/fa6";
 import { FaLinkedinIn } from "react-icons/fa";
 import { FaYoutube } from "react-icons/fa";
 import "./Footer.css";
+// const { footerData1 } = require("../../../server");
 
 const Footer = () => {
   const [footerData, setFooterData] = useState(null);
@@ -11,7 +12,7 @@ const Footer = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch("/api/footer");
+        const response = await fetch("http://localhost:3001/api/footer");
         if (!response.ok) {
           throw new Error("Network response was not ok");
         }
@@ -31,6 +32,20 @@ const Footer = () => {
       <footer className="footer">
         <div className="container">
           <div className="row">
+            {/* {footerData?.map((item) => {
+              const sec = footerData[item];
+              return (
+                <div className="footer-col" key={item}>
+                  <h4>{sec.title}</h4>
+                  {console.log(sec)}
+                  <ul>
+                    {sec.items.map((item1, index) => (
+                      <li key={index}>{item1}</li>
+                    ))}
+                  </ul>
+                </div>
+              );
+            })} */}
             {footerData &&
               Object.keys(footerData).map((sectionKey) => {
                 const section = footerData[sectionKey];

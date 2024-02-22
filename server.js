@@ -1,7 +1,5 @@
 const express = require("express");
 const cors = require("cors");
-// const { data } = require("./src/data/data");
-// const { navbarData1 } = require("./src/data/navbarData1");
 const app = express();
 const port = 3001;
 
@@ -81,7 +79,7 @@ const data = [
 ];
 
 const navbarData1 = [
-  "About",
+  "About us",
   "Services",
   "Solutions",
   "Pricing",
@@ -90,6 +88,7 @@ const navbarData1 = [
 ];
 
 app.get("/api/footer", (req, res) => {
+  console.log(footerData);
   res.json(footerData);
 });
 
