@@ -7,4 +7,16 @@
   margin: 75px 50px 30px;
   padding: 20px;
   width: 80%;
+  height: 20%;
+}
+
+.Content_Card_skimmer {
+  box-shadow: 0 0 10px silver;
+  border-radius: 10px;
+  margin: 75px 50px 30px;
+  padding: 20px;
+  width: 80%;
+  height: 20%;
+  background-color: #f5f5f5; /* Light silver background color */
+  position: relative;
 }

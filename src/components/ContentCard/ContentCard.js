@@ -6,6 +6,7 @@ const ContentCard = () => {
   //   console.log(data);
 
   const [contentData, setContentData] = useState(null);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -16,6 +17,8 @@ const ContentCard = () => {
         setContentData(json);
       } catch (err) {
         console.log("Failed to fetch content data");
+      } finally {
+        setLoading(false);
       }
     };
     fetchData();
@@ -23,13 +26,21 @@ const ContentCard = () => {
 
   return (
     <>
-      {contentData?.map((item) => (
-        <div className="Content_Card">
-          <h2>{item.title}</h2>
-          <p>{item.description}</p>
-          <button>{item.buttonContent}</button>
+      {loading ? (
+        // Loading or skeleton UI while waiting for data
+        <div className="Content_Card_skimmer">Loading.....</div>
+      ) : (
+        // Render your actual content when data is available
+        <div>
+          {contentData?.map((item) => (
+            <div className="Content_Card">
+              <h2>{item.title}</h2>
+              <p>{item.description}</p>
+              <button>{item.buttonContent}</button>
+            </div>
+          ))}
         </div>
-      ))}
+      )}
     </>
   );
 };
