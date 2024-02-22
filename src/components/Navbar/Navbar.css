@@ -100,3 +100,30 @@
     padding: 1rem;
   }
 }
+
+/* @media (max-width: 599px) {
+  .site-header__middle {
+    display: none;
+  }
+
+  .nav__wrapper {
+    top: 56px;
+  }
+
+  .nav__wrapper.active {
+    top: 56px;
+  }
+
+  .site-header.sidebar-open {
+    padding-left: 0;
+  }
+
+  .site-header.sidebar-open .site-header__middle,
+  .site-header.sidebar-open .site-header__end {
+    display: none;
+  }
+
+  .site-header.sidebar-open .nav__wrapper {
+    transform: translateX(0);
+  }
+} */

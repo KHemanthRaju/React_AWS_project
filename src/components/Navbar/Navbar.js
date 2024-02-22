@@ -4,6 +4,7 @@ import { HiOutlineLanguage } from "react-icons/hi2";
 import { PiChats } from "react-icons/pi";
 import { IoIosContact } from "react-icons/io";
 import "./Navbar.css";
+import { Link } from "react-router-dom";
 // import { navbarData1 } from "../../data/navbarData1";
 
 const Navbar = () => {
@@ -51,16 +52,17 @@ const Navbar = () => {
                 </li>
               </ul>
             </nav> */}
-            <a href="#" class="brand">
+            <Link to="/" className="brand">
               Oracle | OCI
-            </a>
+            </Link>
           </div>
           <div className="site-header__middle">
             <ul className="sub-nav">
               {navbarData?.map((item) => (
                 <>
                   <li class="">
-                    <a href="#">{item}</a>
+                    {/* <a href="#">{item}</a> */}
+                    <Link to={`/${item}`}>{item}</Link>
                   </li>
                 </>
               ))}

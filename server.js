@@ -79,7 +79,7 @@ const data = [
 ];
 
 const navbarData1 = [
-  "About us",
+  "About",
   "Services",
   "Solutions",
   "Pricing",
