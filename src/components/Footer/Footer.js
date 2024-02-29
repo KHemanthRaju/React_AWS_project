@@ -12,12 +12,11 @@ const Footer = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch("http://localhost:3001/api/footer");
+        const response = await fetch("http://54.162.229.172:3001/api/footer");
         if (!response.ok) {
           throw new Error("Network response was not ok");
         }
         const data = await response.json();
-        console.log(data);
         setFooterData(data);
       } catch (error) {
         console.error("Error fetching data:", error);

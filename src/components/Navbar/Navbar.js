@@ -12,7 +12,7 @@ const Navbar = () => {
   useEffect(() => {
     const fetchNavbar = async () => {
       try {
-        const response = await fetch("http://localhost:3001/api/navbar");
+        const response = await fetch("http://54.162.229.172:3001/api/navbar");
         if (!response.ok) throw new Error("Could not retrieve navbar data.");
         const jdata = await response.json();
         setNavbarData(jdata);
