@@ -1,7 +1,30 @@
-import React from "react";
+import React, { useState } from "react";
 import "./LoginCard.css";
 
 const LoginCard = () => {
+  const [cloudAccountName, setCloudAccountName] = useState("");
+  const [error, setError] = useState("");
+  const handleInputChange = (e) => {
+    const inputValue = e.target.value;
+
+    // Check if each character is a letter
+    const isValid = inputValue.split("").every((char) => {
+      return (
+        (char >= "a" && char <= "z") ||
+        (char >= "A" && char <= "Z") ||
+        char === " "
+      );
+    });
+
+    if (isValid || inputValue === "") {
+      // Value is valid or empty, update state
+      setCloudAccountName(inputValue);
+      setError("");
+    } else {
+      // Value is not valid, show error message
+      setError("Only Alphabets are allowed");
+    }
+  };
   return (
     <>
       <div className="card">
@@ -12,7 +35,12 @@ const LoginCard = () => {
         <div className="card_middle">
           <p>Cloud Account Name</p>
           <p>
-            <input type="text" />
+            <input
+              type="text"
+              value={cloudAccountName}
+              onChange={handleInputChange}
+            />
+            {error && <span style={{ color: "red" }}>{error}</span>}
           </p>
           <button>Next</button>
           <p>
