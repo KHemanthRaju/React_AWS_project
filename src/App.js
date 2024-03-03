@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import Navbar from "./components/Navbar/Navbar";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import About from "./pages/About";
@@ -8,11 +8,14 @@ import Pricing from "./pages/Pricing";
 import Solutions from "./pages/Solutions";
 import Partners from "./pages/Partners";
 import Resources from "./pages/Resources";
+import ThemeContext from "./context/ThemeContext";
+import "./App.css";
 
 const App = () => {
+  const { theme } = useContext(ThemeContext);
   return (
     <BrowserRouter>
-      <div>
+      <div className={`App ${theme}`}>
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />

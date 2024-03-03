@@ -1,0 +1,17 @@
+:root {
+  --text-primary-light: black;
+  --text-primary-dark: white;
+
+  --bg-primary-light: white;
+  --bg-primary-dark: black;
+}
+
+.light-theme {
+  color: var(--text-primary-light);
+  background-color: var(--bg-primary-light);
+}
+
+.dark-theme {
+  color: var(--text-primary-dark);
+  background-color: var(--bg-primary-dark);
+}

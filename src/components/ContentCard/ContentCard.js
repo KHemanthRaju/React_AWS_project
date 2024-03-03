@@ -11,7 +11,8 @@ const ContentCard = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch(`http://54.162.229.172:3001/api/content`);
+        const response = await fetch(`${process.env.NODE_ENV}/api/content`);
+        console.log(response);
         const json = await response.json();
         if (!response.ok) throw new Error(json.message);
         setContentData(json);

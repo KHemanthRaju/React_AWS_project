@@ -1,18 +1,21 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { IoSearchSharp } from "react-icons/io5";
 import { HiOutlineLanguage } from "react-icons/hi2";
 import { PiChats } from "react-icons/pi";
 import { IoIosContact } from "react-icons/io";
 import "./Navbar.css";
 import { Link } from "react-router-dom";
+import { MdOutlineToggleOff } from "react-icons/md";
+import ThemeContext from "../../context/ThemeContext";
 // import { navbarData1 } from "../../data/navbarData1";
 
 const Navbar = () => {
   const [navbarData, setNavbarData] = useState(null);
+  const { ThemeClick } = useContext(ThemeContext);
   useEffect(() => {
     const fetchNavbar = async () => {
       try {
-        const response = await fetch("http://54.162.229.172:3001/api/navbar");
+        const response = await fetch(`${process.env.NODE_ENV}/api/navbar`);
         if (!response.ok) throw new Error("Could not retrieve navbar data.");
         const jdata = await response.json();
         setNavbarData(jdata);
@@ -70,6 +73,9 @@ const Navbar = () => {
           </div>
           <div class="site-header__end">
             <ul className="sub-nav">
+              <li onClick={ThemeClick}>
+                <MdOutlineToggleOff />
+              </li>
               <li>
                 <a href="#">
                   <IoSearchSharp />

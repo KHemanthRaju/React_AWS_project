@@ -12,7 +12,7 @@ const Footer = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch("http://54.162.229.172:3001/api/footer");
+        const response = await fetch(`${process.env.NODE_ENV}/api/footer`);
         if (!response.ok) {
           throw new Error("Network response was not ok");
         }

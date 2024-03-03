@@ -89,6 +89,7 @@ const navbarData1 = [
 
 app.get("/api/footer", (req, res) => {
   console.log(footerData);
+  console.log(process.env.NODE_ENV);
   res.json(footerData);
 });
 
